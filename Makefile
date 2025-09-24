@@ -8,7 +8,10 @@ LDFLAGS    = $(ROOTLIBS) $(ROOTGLIBS)
 GXX	   = g++ $(CXXFLAGS)
 
 
-a11: cpp_example
+a11: cpp_example cpp_example2
+
+cpp_example2: cpp_example2.cpp
+	$(GXX) $(CXXFLAGS) -o cpp_example2 cpp_example2.cpp $(LDFLAGS)
 
 
 cpp_example: cpp_example.cpp
